@@ -1,0 +1,32 @@
+nav {
+  background-color: rgba(244, 53, 53, 0.811);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav h2 {
+  font-size: 0.8rem;
+}
+
+nav .front_office {
+  margin: 0 40px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+nav .back_office {
+  margin: 0 0 0 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+nav .jadielle_center {
+  font-size: 1.2rem;
+}
+
+nav .white_bg {
+  padding: 6px;
+  border-radius: 10px;
+}
