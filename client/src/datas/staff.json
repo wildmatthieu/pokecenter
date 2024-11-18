@@ -1,0 +1,29 @@
+[
+  {
+    "id": 0,
+    "name": "Sacha",
+    "sexe": "Homme",
+    "age": 10,
+    "adress": "Bourg-Palette, région de Kanto",
+    "email": "sacha.ketchum@pokemon.com",
+    "poketel": "073647583738"
+  },
+  {
+    "id": 1,
+    "name": "Ondine",
+    "sexe": "Femme",
+    "age": 12,
+    "adress": "Azuria, région de Kanto",
+    "email": "ondine.azuria@pokemon.com",
+    "poketel": "070023982094"
+  },
+  {
+    "id": 2,
+    "name": "Pierre",
+    "sexe": "Homme",
+    "age": 15,
+    "adress": "Argenta, région de Kanto",
+    "email": "pierre.argenta@pokemon.com",
+    "poketel": "078452648568"
+  }
+]
