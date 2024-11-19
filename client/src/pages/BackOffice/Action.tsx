@@ -1,8 +1,13 @@
+import Temperature from "../../components/Temperature";
+
 const Action = () => {
   return (
     <>
       <h2>Backoffice</h2>
       <h3>Pokemon en attente de soin</h3>
+
+      <Temperature />
+
       <form>
         <div>
           <label htmlFor="pokemonList">Liste des Pokémon :</label>

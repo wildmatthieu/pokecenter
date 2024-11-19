@@ -1,10 +1,11 @@
 import "./Footer.css";
+import Temperature from "./Temperature";
 
 const Footer = () => {
   return (
-    <footer>
-      <p>Matthieu & Marco 2024 @WildCodeSchool</p>
-    </footer>
+    <>
+      <p>Matthieu & Marco 2024 @WildCodeSchool.</p> <Temperature />
+    </>
   );
 };
 
