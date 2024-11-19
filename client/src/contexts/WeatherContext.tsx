@@ -1,9 +1,29 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import {
+  type ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
-const WeatherContext = createContext(null);
+interface WeatherContextProps {
+  children: ReactNode;
+}
 
-export function WeatherProvider({ children }) {
-  const [weather, setWeather] = useState(null);
+interface WeatherData {
+  hourly: {
+    temperature_2m: number[];
+  };
+}
+
+interface WeatherContextType {
+  weather: WeatherData | null;
+}
+
+const WeatherContext = createContext<WeatherContextType | null>(null);
+
+export function WeatherProvider({ children }: WeatherContextProps) {
+  const [weather, setWeather] = useState<WeatherData | null>(null);
 
   useEffect(() => {
     fetch(
