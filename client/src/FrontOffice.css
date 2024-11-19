@@ -1,0 +1,12 @@
+.light_theme {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.dark_theme {
+  background-color: rgb(44, 44, 44);
+  color: white;
+}
+
+main {
+  min-height: 50vh;
+}
