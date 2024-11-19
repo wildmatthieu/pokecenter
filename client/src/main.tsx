@@ -12,6 +12,7 @@ import FrontOffice from "./FrontOffice";
 import Action from "./pages/BackOffice/Action";
 import Staff from "./pages/BackOffice/Staff";
 import Home from "./pages/FrontOffice/Home";
+import { WeatherProvider } from "./contexts/WeatherContext";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -62,7 +63,9 @@ if (rootElement == null) {
 // Render the app inside the root element
 createRoot(rootElement).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <WeatherProvider>
+      <RouterProvider router={router} />
+    </WeatherProvider>
   </StrictMode>,
 );
 
