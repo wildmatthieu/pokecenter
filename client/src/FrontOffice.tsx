@@ -2,21 +2,29 @@ import { Outlet } from "react-router-dom";
 import "./FrontOffice.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { useTheme } from "./contexts/ThemeContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 function FrontOffice() {
+  const { theme } = useTheme();
+
+  console.log(theme);
+
   return (
     <>
-      <header>
-        <Header />
-      </header>
+      <ThemeProvider>
+        <header>
+          <Header />
+        </header>
 
-      <main>
-        <Outlet />
-      </main>
+        <main className={theme === "light" ? "light_theme" : "dark_theme"}>
+          <Outlet />
+        </main>
 
-      <footer>
-        <Footer />
-      </footer>
+        <footer>
+          <Footer />
+        </footer>
+      </ThemeProvider>
     </>
   );
 }
