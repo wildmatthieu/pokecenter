@@ -1,4 +1,9 @@
+import { useWeather } from "../../contexts/WeatherContext";
+
 const Home = () => {
+  const weatherDatas = useWeather();
+  console.log(weatherDatas);
+
   return (
     <>
       <h2>Page d'accueil</h2>
