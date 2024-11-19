@@ -1,8 +1,26 @@
 import { createContext, useContext, useState } from "react";
+import type { ReactNode } from "react";
 
-const ThemeContext = createContext(null);
+// Interface pour les props du fournisseur de contexte
+// Cette interface spécifie que le composant "Provider" recevra des enfants (children),
+// qui sont des éléments React à rendre à l'intérieur de ce composant.
+interface ContextProviderProps {
+  children: ReactNode; // ReactNode est un type qui représente tout ce qu'on peut rendre dans React (JSX, texte, tableau, etc.).
+}
 
-export function ThemeProvider({ children }) {
+// Interface pour la valeur du contexte
+interface ThemeContextValue {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+  // `React.Dispatch` représente une fonction qui prend une "action" en paramètre.
+  // Ici, `React.SetStateAction<string>` signifie que cette fonction attend soit :
+  // - Une nouvelle valeur de type `string` (exemple : "dark"),
+  // - Une fonction qui retourne une nouvelle valeur basée sur l'ancienne.
+}
+
+const ThemeContext = createContext<ThemeContextValue | null>(null);
+
+export function ThemeProvider({ children }: ContextProviderProps) {
   const [theme, setTheme] = useState("light");
 
   return (
