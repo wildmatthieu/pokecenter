@@ -1,6 +1,11 @@
+import "../../main.css";
+import { useTheme } from "../../contexts/ThemeContext";
+
 const Home = () => {
+  const { theme } = useTheme();
+
   return (
-    <>
+    <main className={theme === "light" ? "light_theme" : "dark_theme"}>
       <h2>Page d'accueil</h2>
       <form>
         <div>
@@ -31,7 +36,7 @@ const Home = () => {
         </div>
         <button type="submit">Déposer son pokemon</button>
       </form>
-    </>
+    </main>
   );
 };
 
