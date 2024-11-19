@@ -2,6 +2,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "./contexts/ThemeContext";
 import "./main.css";
 
 /* ************************************************************************* */
@@ -12,6 +13,7 @@ import FrontOffice from "./FrontOffice";
 import Action from "./pages/BackOffice/Action";
 import Staff from "./pages/BackOffice/Staff";
 import Home from "./pages/FrontOffice/Home";
+import Pokedex from "./pages/FrontOffice/Pokedex";
 
 // Import additional components for new routes
 // Try creating these components in the "pages" folder
@@ -31,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path: "/pokedex",
+        element: <Pokedex />,
       },
     ],
   },
@@ -62,7 +68,9 @@ if (rootElement == null) {
 // Render the app inside the root element
 createRoot(rootElement).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 );
 

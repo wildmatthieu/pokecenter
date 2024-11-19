@@ -1,9 +1,20 @@
+header {
+  background-image: url("https://bibliotheques.lehavre.fr/sites/default/files/vignettes/actualites/semaine_pokemon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 0 0 30px 0;
+  height: 260px;
+}
+
 nav {
-  background-color: rgba(244, 53, 53, 0.811);
+  background-color: var(--main-color);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  color: white;
+  height: 80px;
 }
 
 nav h2 {
@@ -17,16 +28,62 @@ nav .front_office {
 }
 
 nav .back_office {
-  margin: 0 0 0 40px;
-  display: flex;
-  flex-direction: column;
+  margin: 0 0 0 60px;
 }
 
 nav .jadielle_center {
   font-size: 1.2rem;
+  margin-left: 10px;
 }
 
-nav .white_bg {
+nav .office_text {
   padding: 6px;
-  border-radius: 10px;
+  color: var(--secondary-color);
+  font-style: italic;
+  text-align: center;
+}
+
+.poke_logo {
+  width: 40px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+.toggle_container {
+  height: 100%;
+  margin: auto 10px auto 20px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(244, 228, 122);
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
 }

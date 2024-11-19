@@ -1,5 +1,10 @@
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-style: italic;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 1px var(--white-color);
 }
